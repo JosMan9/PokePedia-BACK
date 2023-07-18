@@ -378,5 +378,140 @@ public class PokeController {
         return service.listCharacteristic(id);
     }
     
+    @GetMapping("/egg-group")
+    public HashMap eggGroups() {
+        return service.listAllEggGroups("https://pokeapi.co/api/v2/egg-group/");
+    }
+    
+    @GetMapping("/egg-group/{idName}")
+    public HashMap eggGroup(@PathVariable String idName) {
+        return service.listEggGroup(idName);
+    }
+    
+    @GetMapping("/gender")
+    public HashMap genders() {
+        return service.listAllGenders("https://pokeapi.co/api/v2/gender/");
+    }
+    
+    @GetMapping("/gender/{idName}")
+    public HashMap gender(@PathVariable String idName) {
+        return service.listGender(idName);
+    }
+    
+    @GetMapping("/growth-rate")
+    public HashMap growthRates() {
+        return service.listAllGrowthRates("https://pokeapi.co/api/v2/growth-rate/");
+    }
+    
+    @GetMapping("/growth-rate/{idName}")
+    public HashMap growthRate(@PathVariable String idName) {
+        return service.listGrowthRate(idName);
+    }
+    
+    @GetMapping("/nature")
+    public HashMap natures() {
+        return service.listAllNatures("https://pokeapi.co/api/v2/natures/");
+    }
+    
+    @GetMapping("/nature/{idName}")
+    public HashMap nature(@PathVariable String idName) {
+        return service.listNature(idName);
+    }
+    
+    @GetMapping("/pokeathlon-stat")
+    public HashMap pokeathlonStats() {
+        return service.listAllPokeathlonStats("https://pokeapi.co/api/v2/pokeathlon-stat/");
+    }
+    
+    @GetMapping("/pokeathlon-stat/{idName}")
+    public HashMap pokeathlonStat(@PathVariable String idName) {
+        return service.listPokeathlonStat(idName);
+    }
+    
+    @GetMapping("/pokemon")
+    public HashMap pokemon() {
+        return service.listAllPokemon("https://pokeapi.co/api/v2/pokemon/");
+    }
+    
+    @GetMapping("/pokemon/{idName}")
+    public HashMap pokemon(@PathVariable String idName) {
+        return service.listPokemon(idName);
+    }
+    
+    @GetMapping("/pokemon-location-area/{idName}")
+    public HashMap locationAreas(@PathVariable String idName) {
+        return service.listLocationArea(idName);
+    }
+    
+    @GetMapping("´/pokemon-color")
+    public HashMap pokemonColors() {
+        return service.listAllPokemonColors("https://pokeapi.co/api/v2/pokemon-color/");
+    }
+    
+    @GetMapping("/pokemon-color/{idName}")
+    public HashMap pokemonColor(@PathVariable String idName) {
+        return service.listPokemonColor(idName);
+    }
+    
+    @GetMapping("/pokemon-form")
+    public HashMap pokemonForms() {
+        return service.listAllPokemonForms("https://pokeapi.co/api/v2/pokemon-form/");
+    }
+    
+    @GetMapping("/pokemon-form/{idName}")
+    public HashMap pokemonForm(@PathVariable String idName){
+        return service.listPokemonForm(idName);
+    }
+    
+    @GetMapping("/pokemon-habitat")
+    public HashMap pokemonHabitats() {
+        return service.listAllPokemonHabitats("https://pokeapi.co/api/v2/pokemon-habitat/");
+    }
+    
+    @GetMapping("/pokemon-habitat/{idName}")
+    public HashMap pokemonHabitat(@PathVariable String idName) {
+        return service.listPokemonHabitat(idName);
+    }
+    
+    @GetMapping("/pokemon-shape")
+    public HashMap pokemonShapes() {
+        return service.listAllPokemonShapes("https://pokeapi.co/api/v2/pokemon-shape/");
+    }
+    
+    @GetMapping("/pokemon-shape/{idName}")
+    public HashMap pokemonShape(@PathVariable String idName) {
+        return service.listPokemonShape(idName);
+    }
+    
+    @GetMapping("/pokemon-species")
+    public HashMap pokemonSpecies() {
+        return service.listAllPokemonSpecies("https://pokeapi.co/api/v2/pokemon-species/");
+    }
+    
+    @GetMapping("/pokemon-species/{idName}")
+    public HashMap pokemonSpecies(@PathVariable String idName) {
+        return service.listPokemonShape(idName);
+    }
+    
+    @GetMapping("/stat")
+    public HashMap stats() {
+        return service.listAllStats("https://pokeapi.co/api/v2/stat/");
+    }
+    
+    @GetMapping("/stat/{idName}") 
+    public HashMap stat(@PathVariable String idName) {
+        return service.listStat(idName);
+    }
+    
+    @GetMapping("/type")
+    public HashMap types() {
+        return service.listAllTypes("https://pokeapi.co/api/v2/type/");
+    }
+    
+    @GetMapping("/type/{idName}")
+    public HashMap type(@PathVariable String idName) {
+        return service.listType(idName);
+    }
+    
     
 }
