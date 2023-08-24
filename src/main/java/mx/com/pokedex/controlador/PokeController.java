@@ -40,7 +40,7 @@ public class PokeController {
     
     @GetMapping("/berry")
     public HashMap berries() {
-        return service.listAllBerires("https://pokeapi.co/api/v2/berry/");
+        return service.listAllBerires("https://pokeapi.co/api/v2/berry/?offset=0&limit=64");
     }
     
     @GetMapping("/berry/{idName}")
@@ -49,7 +49,7 @@ public class PokeController {
     }
     
     @GetMapping("/berry-firmness")
-    public HashMap berriesFirmnessess() {
+    public HashMap berriesFirmnesses() {
         return service.listAllBerryFirmness("https://pokeapi.co/api/v2/berry-firmness/");
     }
     
@@ -100,7 +100,7 @@ public class PokeController {
     
     @GetMapping("/encounter-method")
     public HashMap encounterMethods() {
-        return service.listAllEncounterMethods("https://pokeapi.co/api/v2/encounter-method/");
+        return service.listAllEncounterMethods("https://pokeapi.co/api/v2/encounter-method/?offset=0&limit=31");
     }
     
     @GetMapping("/encounter-method/{idName}")
@@ -430,7 +430,7 @@ public class PokeController {
     
     @GetMapping("/pokemon")
     public HashMap pokemon() {
-        return service.listAllPokemon("https://pokeapi.co/api/v2/pokemon/");
+        return service.listAllPokemon("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1010");
     }
     
     @GetMapping("/pokemon/{idName}")
@@ -513,5 +513,14 @@ public class PokeController {
         return service.listType(idName);
     }
     
+    @GetMapping("/language")
+    public HashMap languages() {
+        return service.listAllLanguages("https://pokeapi.co/api/v2/language/");
+    }
+    
+    @GetMapping("/language/{idName}") 
+    public HashMap language(@PathVariable String idName) {
+        return service.listLanguage(idName);
+    }
     
 }
