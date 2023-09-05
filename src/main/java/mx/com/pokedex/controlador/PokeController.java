@@ -160,7 +160,7 @@ public class PokeController {
     
     @GetMapping("/pokedex")
     public HashMap pokedexes() {
-        return service.listAllPokedexes("https://pokeapi.co/api/v2/pokedex/");
+        return service.listAllPokedexes("https://pokeapi.co/api/v2/pokedex/?offset=0&limit=33");
     }
     
     @GetMapping("/pokedex/{idName}")
@@ -180,7 +180,7 @@ public class PokeController {
     
     @GetMapping("/version-group")
     public HashMap versionGroups() {
-        return service.listAllVersionGroup("https://pokeapi.co/api/v2/version-group/");
+        return service.listAllVersionGroup("https://pokeapi.co/api/v2/version-group/?offset=0&limit=27");
     }
     
     @GetMapping("/version-group/{idName}")
@@ -190,7 +190,7 @@ public class PokeController {
     
     @GetMapping("/item")
     public HashMap items() {
-        return service.listAllItems("https://pokeapi.co/api/v2/item/");
+        return service.listAllItems("https://pokeapi.co/api/v2/item?offset=0&limit=2060");
     }
     
     @GetMapping("/item/{idName}")
@@ -210,7 +210,7 @@ public class PokeController {
     
     @GetMapping("/item-category")
     public HashMap itemCategories() {
-        return service.listAllItemCategories("https://pokeapi.co/api/v2/item-category/");
+        return service.listAllItemCategories("https://pokeapi.co/api/v2/item-category/?offset=0&limit=55");
     }
     
     @GetMapping("/item-category/{idName}")
@@ -240,17 +240,17 @@ public class PokeController {
     
     @GetMapping("/location")
     public HashMap locations() {
-        return service.listAllLocations("https://pokeapi.co/api/v2/location/");
+        return service.listAllLocations("https://pokeapi.co/api/v2/location/?offset=0&limit=851");
     }
     
     @GetMapping("/location/{idName}")
-    public HashMap location(@PathVariable String idNmae) {
-        return service.listLocation(idNmae);
+    public HashMap location(@PathVariable String idName) {
+        return service.listLocation(idName);
     }
     
     @GetMapping("/location-area")
     public HashMap locationAreas() {
-        return service.listAllLocationAreas("https://pokeapi.co/api/v2/location-area/");
+        return service.listAllLocationAreas("https://pokeapi.co/api/v2/location-area/?offset=0&limit=750");
     }
     
     @GetMapping("/location-area/{idName}")
@@ -280,7 +280,7 @@ public class PokeController {
     
     @GetMapping("/machine")
     public HashMap machines() {
-        return service.listAllMachines("https://pokeapi.co/api/v2/machine/");
+        return service.listAllMachines("https://pokeapi.co/api/v2/machine/?offser=0&limit=1700");
     }
     
     @GetMapping("/machine/{id}")
@@ -290,7 +290,7 @@ public class PokeController {
     
     @GetMapping("/move")
     public HashMap moves() {
-        return service.listAllMoves("https://pokeapi.co/api/v2/move/");
+        return service.listAllMoves("https://pokeapi.co/api/v2/move/?offset=0&limit=1000");
     }
     
     @GetMapping("/move/{idName}")
@@ -300,7 +300,7 @@ public class PokeController {
     
     @GetMapping("/move-aliment")
     public HashMap moveAliments() {
-        return service.listAllMoveAliments("https://pokeapi.co/api/v2/move-ailment/");
+        return service.listAllMoveAliments("https://pokeapi.co/api/v2/move-ailment/?offset=0&limit=50");
     }
     
     @GetMapping("/move-aliment/{idName}")
