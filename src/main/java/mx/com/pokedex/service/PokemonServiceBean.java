@@ -87,7 +87,7 @@ public class PokemonServiceBean implements PokemonService {
 
     @Override
     public HashMap listBerryFirmness(String name) {
-        ResponseEntity<HashMap> response = restTemplate.exchange("ttps://pokeapi.co/api/v2/berry-firmness/" + name, 
+        ResponseEntity<HashMap> response = restTemplate.exchange("https://pokeapi.co/api/v2/berry-firmness/" + name, 
                 HttpMethod.GET,
                 HttpEntity.EMPTY,
                 new ParameterizedTypeReference<HashMap>() {});

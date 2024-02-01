@@ -4,20 +4,13 @@
  */
 package mx.com.pokedex.controlador;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import mx.com.pokedex.modelo.Description;
-import mx.com.pokedex.modelo.test.GameIndex;
-import mx.com.pokedex.modelo.test.PokemonSpecie;
 import mx.com.pokedex.service.PokemonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -298,12 +291,12 @@ public class PokeController {
         return service.listMove(idName);
     }
     
-    @GetMapping("/move-aliment")
+    @GetMapping("/move-ailment")
     public HashMap moveAliments() {
         return service.listAllMoveAliments("https://pokeapi.co/api/v2/move-ailment/?offset=0&limit=50");
     }
     
-    @GetMapping("/move-aliment/{idName}")
+    @GetMapping("/move-ailment/{idName}")
     public HashMap moveAliment(@PathVariable String idName) {
         return service.listMoveAliment(idName);
     }
